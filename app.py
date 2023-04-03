@@ -16,12 +16,36 @@ def multiplication(num1 , num2):
 def division(num1 , num2):
     return num1 / num2
 
-# A function to take input from user
-def input():
+cont = True
+
+while(cont):
     print('Choose the operation:\n')
     print('1. Addition')
     print('2. Subtraction')
     print('3. Multiplication')
     print('4. Division')
-    input = int(input('Enter your choice: '))
-    return input
+    inpt = int(input('Enter your choice: '))
+
+    if inpt not in [1 , 2 , 3 , 4]:
+        print('Wrong input. Try again')
+        continue
+    else:
+        num1 = int(input('Enter first number: '))
+        num2 = int(input('Enter second number: '))
+
+        if inpt == 1:
+            print(addition(num1 , num2))
+        elif inpt == 2:
+            print(subtraction(num1 , num2))
+        elif inpt == 3:
+            print(multiplication(num1 , num2))
+        else:
+            print(division(num1 , num2))
+        
+    print('Do you want to continue?')
+    choice = input('Enter your choice: ')
+
+    if choice.upper() in ['Y' , 'YES']:
+        cont = True
+    else:
+        cont = False 
