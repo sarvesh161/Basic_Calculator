@@ -16,8 +16,8 @@ def multiplication(num1 , num2):
 def division(num1 , num2):
     return num1 / num2
 
+# Code to choose operartion
 cont = True
-
 while(cont):
     print('Choose the operation:\n')
     print('1. Addition')
@@ -26,6 +26,7 @@ while(cont):
     print('4. Division')
     inpt = int(input('Enter your choice: '))
 
+#Code to implement the operation
     if inpt not in [1 , 2 , 3 , 4]:
         print('Wrong input. Try again')
         continue
@@ -42,6 +43,7 @@ while(cont):
         else:
             print(division(num1 , num2))
 
+# Code to try the process again
     cont2 = True
     while(cont2):    
         print('Do you want to continue?')
