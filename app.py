@@ -41,11 +41,18 @@ while(cont):
             print(multiplication(num1 , num2))
         else:
             print(division(num1 , num2))
-        
-    print('Do you want to continue?')
-    choice = input('Enter your choice: ')
 
-    if choice.upper() in ['Y' , 'YES']:
-        cont = True
-    else:
-        cont = False 
+    cont2 = True
+    while(cont2):    
+        print('Do you want to continue?')
+        choice = input('Enter your choice: ')
+
+        if choice.upper() in ['Y' , 'YES']:
+            cont = True
+            cont2 = True
+        elif choice.upper() in ['N' , 'NO']:
+            cont = False 
+            cont2 = False
+        else:
+            print('Answer as yes or no')
+            continue
